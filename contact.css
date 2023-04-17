@@ -1,0 +1,38 @@
+/* css for login form */
+.Form{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+}
+.div_label{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px 5px;
+    position: absolute;
+}
+.form-control{
+    padding: 10px 5px;
+    margin: 10px 20px;
+    display: flex;
+    width: 390px;
+    border-radius: 5px;
+    outline: none; 
+    text-align: center;
+    border: 0.005rem solid rgb(0, 0, 0);
+}
+/* .form-label{
+    padding: 10px 5px;
+    margin: 8px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+} */
+.btn{
+    margin: 12px 10px;
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
