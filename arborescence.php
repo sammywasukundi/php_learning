@@ -1,13 +1,38 @@
-<?php 
-    $parents =array(
-            array('enfant1','21','biochimie'),
-            array('enfant2','14','electronique'),
-            array('enfant3','25','pedagogie')
-    );
+<?php
+// Définition de la structure de l'arborescence
+$tree = array(
+    'branche 1' => array(
+        'branche 2' => array(
+            'sous-branche 1',
+            'sous-branche 2',
+            'sous-branche 3'
+        ),
+        'sous-branche 4',
+        'sous-branche 5'
+    ),
+    'branche 3' => array(
+        'sous-branche 1',
+        'sous-branche 2',
+        'sous-branche 3'
+    )
+);
 
-    foreach($parents as $parent){
-        echo $parent[0].' '.$parent[1].' '.$parent[2]."</br>";
+// Fonction récursive pour afficher l'arborescence
+function displayTree($tree, $indent = 0) {
+    foreach ($tree as $key => $value) {
+        // affiche l'indentation correspondante
+        echo str_repeat("\t", $indent);
+        // affiche le nom du dossier/fichier
+        echo "- $value\n";
+        if (is_array($value)) {
+            // si la valeur est un tableau, on appelle la fonction récursivement
+            displayTree($value, $indent + 1);
+        }
     }
+}
+
+// Affichage de l'arborescence
+displayTree($tree);
+
 ?>
 
-<!-- et la si on veut on affiche seulement les options ou encore les ages -->
